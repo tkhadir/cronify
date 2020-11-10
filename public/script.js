@@ -12,6 +12,8 @@ let addJob = () => {
     fetch('http://localhost:3000/save', options)
         .then(response => {
         console.log('done')
+        alert('done')
+        refresh()
     })
     .catch(error => {
         console.error(error)
@@ -40,7 +42,7 @@ let refresh = () => {
             let monitoringData = []
             data.forEach(d => {
                 jobsData.push('<li class="list-group-item d-flex justify-content-between align-items-center">'+ d.script + '<span class="badge badge-primary badge-pill">' + d.cron + '</span></li>')
-                d.results.forEach(r => monitoringData.push('<li class="list-group-item d-flex justify-content-between align-items-center">' + r.date + ' ' + r.status + '</li>'))
+                if (d.results) d.results.forEach(r => monitoringData.push('<li class="list-group-item d-flex justify-content-between align-items-center">' + r.date + ' ' + r.status + '</li>'))
             })
             $('#jobs-list').html(jobsData.join(''))
             $('#monitor-list').html(monitoringData.join(''))
