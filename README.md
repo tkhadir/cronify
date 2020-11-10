@@ -7,5 +7,10 @@ simple tool to crontab shell scripts and execute them
 # how to start app
 
 ```
+npm install
 npm run serve
 ```
+
+# how to contribute
+
+just fork and modify
