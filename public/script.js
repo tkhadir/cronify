@@ -12,12 +12,12 @@ let addJob = () => {
     fetch('http://localhost:3000/save', options)
         .then(response => {
         console.log('done')
-        alert('done')
+        //alert('done')
         refresh()
     })
     .catch(error => {
         console.error(error)
-        alert('an error occcured during adding job : ' + error)
+        //alert('an error occcured during adding job : ' + error)
     })
 }
 
@@ -50,6 +50,6 @@ let refresh = () => {
     })
     .catch(error => {
         console.error(error)
-        alert('an error occcured during adding job : ' + error)
+        //alert('an error occcured during adding job : ' + error)
     })
 }
